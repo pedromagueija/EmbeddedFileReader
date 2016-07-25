@@ -12,7 +12,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Magueija.EmbeddedFileReader
+namespace NUtil
 {
     using System.Collections.Generic;
     using System.Linq;

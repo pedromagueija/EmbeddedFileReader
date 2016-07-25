@@ -7,8 +7,8 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("Copyright © 2016")]
 
-[assembly: AssemblyVersion("0.0.2.0")]
-[assembly: AssemblyFileVersion("0.0.2.0")]
-[assembly: AssemblyInformationalVersion("0.0.2-alpha")]
+[assembly: AssemblyVersion("0.0.5.0")]
+[assembly: AssemblyFileVersion("0.0.5.0")]
+[assembly: AssemblyInformationalVersion("0.0.5-alpha")]
 [assembly: InternalsVisibleTo("EmbeddedFileReader.UnitTests")]
 [assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]

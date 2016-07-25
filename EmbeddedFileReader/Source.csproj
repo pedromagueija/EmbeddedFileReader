@@ -7,8 +7,8 @@
     <ProjectGuid>{B7369300-D355-4201-9018-20753A41F273}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Magueija.EmbeddedFileReader</RootNamespace>
-    <AssemblyName>EmbeddedFileReader</AssemblyName>
+    <RootNamespace>NUtil</RootNamespace>
+    <AssemblyName>NUtil.EmbeddedFileReader</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\EmbeddedFileReader.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\NUtil.EmbeddedFileReader.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

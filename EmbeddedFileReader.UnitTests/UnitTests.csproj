@@ -7,7 +7,7 @@
     <ProjectGuid>{DE0D6412-E685-459F-9515-F6961E4D09F3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Magueija.EmbeddedFileReader.UnitTests</RootNamespace>
+    <RootNamespace>NUtil.EmbeddedFileReader.UnitTests</RootNamespace>
     <AssemblyName>EmbeddedFileReader.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

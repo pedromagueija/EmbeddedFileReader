@@ -12,15 +12,15 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Magueija.EmbeddedFileReader.UnitTests
+namespace NUtil.EmbeddedFileReader.UnitTests
 {
     using System;
-
-    using Magueija.EmbeddedFileReader;
 
     using NSubstitute;
 
     using NUnit.Framework;
+
+    using NUtil;
 
     internal class EmbeddedFileReaderTests
     {
