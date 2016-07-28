@@ -14,6 +14,7 @@
 
 namespace NUtil
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
@@ -24,12 +25,24 @@ namespace NUtil
         {
             Assembly assembly = Assembly.GetAssembly(typeof(T));
 
-            return assembly.GetManifestResourceNames();
+            return FindAll(assembly);
         }
 
         public virtual string FindOne<T>(string resourceName)
         {
             string[] resources = FindAll<T>().ToArray();
+
+            return resources.FirstOrDefault(name => name.EndsWith(resourceName));
+        }
+
+        public virtual IEnumerable<string> FindAll(Assembly assembly)
+        {
+            return assembly.GetManifestResourceNames();
+        }
+
+        internal string FindOne(string resourceName, Assembly assembly)
+        {
+            string[] resources = FindAll(assembly).ToArray();
 
             return resources.FirstOrDefault(name => name.EndsWith(resourceName));
         }

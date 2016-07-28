@@ -53,14 +53,19 @@ namespace NUtil
         {
             Assembly assembly = Assembly.GetAssembly(typeof(T));
 
-            string resource = finder.FindOne<T>(resourceName);
+            return ReadEmbeddedFile(resourceName, assembly);
+        }
+
+        public string ReadEmbeddedFile(string resourceName, Assembly containingAssembly)
+        {
+            string resource = finder.FindOne(resourceName, containingAssembly);
             if (string.IsNullOrEmpty(resource))
             {
                 throw new InvalidOperationException(
-                    $"The resource {resourceName} was not found in assembly {assembly}. Consider making {resourceName} an Embedded Resource.");
+                    $"The resource {resourceName} was not found in assembly {containingAssembly}. Consider making {resourceName} an Embedded Resource.");
             }
 
-            using (Stream stream = assembly.GetManifestResourceStream(resource))
+            using (Stream stream = containingAssembly.GetManifestResourceStream(resource))
             {
                 if (stream == null)
                 {
