@@ -19,7 +19,8 @@ namespace NUtil
     using System.Reflection;
 
     /// <summary>
-    /// Reads an embedded file.
+    /// Reads an embedded file.<para/>
+    /// File must be set as an embedded resource.
     /// </summary>
     public class EmbeddedFileReader
     {
@@ -56,6 +57,18 @@ namespace NUtil
             return ReadEmbeddedFile(resourceName, assembly);
         }
 
+
+        /// <summary>
+        /// Reads the contents of an Embedded Resource file.
+        /// </summary>
+        /// <param name="resourceName">The name of the file.</param>
+        /// <param name="containingAssembly">The assembly that contains the file.</param>
+        /// <returns>
+        /// The contents of the file.
+        /// </returns>
+        /// <exception cref="InvalidOperationException">
+        /// Thrown when the file is not an Embedded Resource, or it's impossible to read (permissions) the resource.
+        /// </exception>
         public string ReadEmbeddedFile(string resourceName, Assembly containingAssembly)
         {
             string resource = finder.FindOne(resourceName, containingAssembly);
