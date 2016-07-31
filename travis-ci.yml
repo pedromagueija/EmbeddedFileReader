@@ -1,0 +1,7 @@
+language: csharp
+solution: EmbeddedFileReader.sln
+install:
+  - nuget restore EmbeddedFileReader.sln
+script:
+  - xbuild /t:Build /p:Configuration="Release" /p:Platform="Any CPU" EmbeddedFileReader.sln
+  - mono ./packages/NUnit.ConsoleRunner.3.2.1/tools/nunit3-console.exe ./EmbeddedFileReader.UnitTests/bin/Release/EmbeddedFileReader.UnitTests.dll
